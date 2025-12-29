@@ -16,8 +16,8 @@
 }
 ,{"type":"table","name":"projets","database":"cyberfolio","data":
 [
-{"id":"1","nom":"Cyberfolio","description":"Conception et developpement de mon portfolio professionnel pour presenter mes competences techniques et mes projets realises.","date_debut":"2025-11-17","date_fin":"2025-12-05","date_creation":"2025-12-01 11:27:42","lien_projet":"..\/pages\/projet-cyberfolio.php"},
-{"id":"2","nom":"Techniques de sécurisation ISR","description":"Sécurisation d'une infrastructure réseau . Le projet inclut l'analyse de failles réseau, la configuration d'un réseau sécurisé, le filtrage de trafic, le déploiement d'une solution de supervision SIEM (Wazuh), et l'installation d'un proxy SSL.","date_debut":"2025-10-27","date_fin":"2025-11-06","date_creation":"2025-12-01 11:32:50","lien_projet":"..\/pages\/projet-ISR.php"}
+{"id":"1","nom":"Cyberfolio","description":"Conception et developpement de mon portfolio professionnel pour presenter mes competences techniques et mes projets realises.","date_debut":"2025-11-17","date_fin":"2025-12-05","date_creation":"2025-12-01 11:27:42","lien_projet":"/pages/projet-cyberfolio.html"},
+{"id":"2","nom":"Techniques de sécurisation ISR","description":"Sécurisation d'une infrastructure réseau . Le projet inclut l'analyse de failles réseau, la configuration d'un réseau sécurisé, le filtrage de trafic, le déploiement d'une solution de supervision SIEM (Wazuh), et l'installation d'un proxy SSL.","date_debut":"2025-10-27","date_fin":"2025-11-06","date_creation":"2025-12-01 11:32:50","lien_projet":"/pages/projet-ISR.html"}
 ]
 }
 ,{"type":"table","name":"projet_competences","database":"cyberfolio","data":
@@ -33,3 +33,4 @@
 ]
 }
 ]
+
