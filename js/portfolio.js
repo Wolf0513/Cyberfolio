@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // --- 2. PROJETS ---
+            // --- 2. PROJETS (SANS LIENS) ---
             const conteneurProjets = document.getElementById('projets-conteneur');
             if (conteneurProjets) {
                 conteneurProjets.innerHTML = ''; 
@@ -34,25 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dateD = new Date(projet.date_debut).toLocaleDateString('fr-FR');
                     const dateF = projet.date_fin ? new Date(projet.date_fin).toLocaleDateString('fr-FR') : 'En cours';
 
+                    // ICI : On a enlevé la balise <a> pour supprimer l'accès
                     const card = `
                         <div class="carte-projet">
                             <h3>${projet.nom}</h3>
                             <p>${projet.description}</p>
                             <span class="projet-compétence">
-                                ${competencesLiees}
+                                <strong>Technologies :</strong> ${competencesLiees}
                                 <p class="projet-dates">Du ${dateD} au ${dateF}</p>
                             </span>
-                            <a href="${projet.lien_projet || '#'}" class="lien-projet">Détails du projet</a>
                         </div>
                     `;
                     conteneurProjets.insertAdjacentHTML('beforeend', card);
                 });
             }
         })
-        .catch(err => console.error("Erreur lors du chargement du JSON :", err));
+        .catch(err => console.error("Erreur :", err));
 });
 
-// Gestion du défilement fluide
+// Garde le Smooth Scroll pour le menu
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
