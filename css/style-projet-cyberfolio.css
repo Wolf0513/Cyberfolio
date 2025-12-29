@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+body {
+    background-image: url("../images/fond-ecran-Axel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    min-height: 100vh;
+    background-color: #050510; 
+    margin: 0;
+    color: #e0e0e0; 
+    font-family: 'Poppins', sans-serif;
+    /* Styles ajoutés pour le centrage du checker (si page dédiée) */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+/* NAVIGATION */
+.navigation {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 10, 0.95);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.navigation .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+}
+
+.nom {
+    font-family: 'Lora', sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.liens {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+.lien {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+nav ul li a {
+    font-family: 'Playfair Display', sans-serif;
+    color: #ffffff;
+}
+
+nav ul li a:visited {
+    color: #ffffff;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 10, 0.95);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+footer img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+    .intro,
+    .a-propos,
+    .projets { 
+        margin: 40px auto;
+        padding: 0;
+    }
+    .a-propos {
+        padding: 30px;
+    }
+    .titre-principal {
+        font-size: 2.5em;
+    }
+    .sous-titre {
+        font-size: 1.1em;
+    }
+    /* GESTION RESPONSIVE DU CHECKER (<600px) */
+    .conteneur-verificateur {
+        max-width: 90%; 
+        padding: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navigation {
+        justify-content: flex-start;
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .navigation .logo {
+        position: static;
+        margin-bottom: 10px;
+    }
+    .liens {
+        flex-direction: column;
+        gap: 15px;
+    }
+    /* GESTION RESPONSIVE DU CHECKER (<=800px) */
+    .conteneur-verificateur {
+        max-width: 90%; 
+        padding: 30px;
+    }
+}
+
+@media (min-width: 800px) {
+    nav ul li a:hover {
+        color: lightblue;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: #050510; 
+    }
+}
+
+
+/*RAID*/
+.conteneur-verificateur { /* Classe principale du checker */
+    max-width: 450px;
+    width: 100%;
+    padding: 40px;
+    background: rgba(10, 10, 20, 0.95); 
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.3); 
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    margin: 50px auto; 
+}
+
+.conteneur-verificateur h2 {
+    font-family: 'Lora', serif;
+    color: #ffffff;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Styles des messages d'alerte */
+.securise, .compromis, .information {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-weight: 600;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.securise {
+    background-color: #153b21;
+    color: #c3e6cb;
+    border: 1px solid #285a36;
+}
+.compromis {
+    background-color: #5a1e26; 
+    color: #f5c6cb;           
+    border: 1px solid #852f36;
+}
+.information {
+    background-color: #554411;
+    color: #ffebcd;
+    border: 1px solid #776633;
+}
+.compromis ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+.compromis li {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: #ffdbdb;
+}
+
+/* Formulaire */
+.conteneur-verificateur label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #90caf9; 
+    font-family: 'Poppins', sans-serif; 
+}
+.conteneur-verificateur input[type="password"], .conteneur-verificateur button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.conteneur-verificateur input[type="password"] {
+    background: #1a1a30;
+    border: 1px solid #333355;
+    color: #ffffff;
+    font-size: 1em;
+}
+.conteneur-verificateur input[type="password"]:focus {
+    outline: none;
+    border-color: #0d47a1;
+    box-shadow: 0 0 5px rgba(13, 71, 161, 0.5);
+}
+.conteneur-verificateur button {
+    background-color: #0d47a1; 
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s;
+}
+.conteneur-verificateur button:hover {
+    background: #093475;
+}
+.conteneur-verificateur button:active {
+    transform: scale(0.99);
+}
+
+.lien-HIPB {
+    font-size: 0.75em;
+    text-align: center;
+    color: #90caf9;
+    text-decoration: none;
+}
+
+/* --- Mise en page générale --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: #f4f4f9;
+}
+.container {
+    /* Conteneur principal centré */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    color: #4a90e2;
+}
+
+/* --- Style du Bouton "Cat Fact" --- */
+#catFactButton {
+    /* Le bouton pour déclencher la requête */
+    display: block; /* Prend toute la largeur du conteneur */
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+#catFactButton:hover {
+    /* Effet au survol */
+    background-color: #357ae8;
+}
+
+/* --- Style de la Zone de Résultat --- */
+#factOutput {
+    /* La boîte où le fait est affiché */
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    min-height: 50px; /* Assure une hauteur minimale */
+    font-style: italic;
+    text-align: left;
+    background-color: #e6f7ff;
+}

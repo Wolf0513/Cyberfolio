@@ -1,0 +1,60 @@
+<?php
+include '../php/API-HIPB.php'; 
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style-projet-cyberfolio.css">
+    
+    <title>Cyberfolio</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="navigation">
+            <div class="logo">
+                <img src="../images/logo.png" alt="logo du groupe Cyber Student" title="Cyber Shield" width="50" height="50">
+                <h2 class="nom">Cyber Student</h2>
+            </div>
+            <ul class="liens">
+                <li><a href="Page d'accueil portfolio.html" class="lien">Accueil</a></li>
+                <li><a href="Portfolio-Axel.php" class="lien">Retour</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="conteneur-verificateur">
+        <h2>Vérification Mot de Passe (Pwned Passwords)</h2>
+
+        <?php 
+        // Affiche l'alerte générée par le fichier inclus
+        echo $alerte_hibp; 
+        ?>
+
+        <form method="POST">
+            <input type="hidden" name="check_password" value="1">
+            
+            <label for="password_checker">Entrez votre mot de passe :</label>
+            <input type="password" id="password_checker" name="password" required 
+                   placeholder="Tapez un mot de passe (ex: password ou 123456)"
+                   value="<?php echo htmlspecialchars($mot_de_passe_a_verifier); ?>">
+
+            <button type="submit">Vérifier le mot de passe</button>
+        </form>
+            <a href="https://haveibeenpwned.com/Passwords" target="_blank" class="lien-HIPB">Service Pwned Passwords de HIBP</a>
+    </div>
+<footer>
+    <a href="../cv/CV Axel Girard.pdf" class="lien" download>
+        <img src="../images/IconeCV.png" alt="icone de cv">
+    </a>
+    <a href="https://www.linkedin.com/in/axel-girard-8a5546387" target="_blank" class="lien">
+        <img src="../images/Linkedin.png" alt="Icone de Linkedin">
+    </a>
+</footer>
+</body>
+</html>
