@@ -15,18 +15,6 @@ Ce portfolio a été conçu pour être à la fois léger, sécurisé et facileme
 
     Hébergement : GitHub Pages
 
-📂 Structure du dépôt
-
-    /index.html : Point d'entrée principal du site.
-
-    /css : Feuilles de style pour le design "Cyber".
-
-    /js/portfolio.js : Moteur JavaScript gérant le défilement fluide et la récupération (fetch) des données.
-
-    /json/cyberfolio.json : Base de données du portfolio (projets et compétences).
-
-    /images : Ressources graphiques et favicon.
-
 🔒 Focus Cybersécurité
 
 Dans une démarche de "Security by Design", ce portfolio évite les vulnérabilités liées aux bases de données dynamiques (comme les injections SQL) en utilisant une structure de fichiers statiques, réduisant ainsi la surface d'attaque.
