@@ -1,4 +1,3 @@
-Voici une proposition de README.md efficace et professionnelle, adaptée à ton profil d'étudiant en cybersécurité à Guardia. Elle explique clairement que ton site est passé d'une architecture PHP/SQL à une solution statique optimisée.
 🛡️ Cyberfolio - Axel Girard
 
 Bienvenue sur le dépôt de mon portfolio professionnel. Ce projet présente mes compétences techniques et mes travaux réalisés au cours de ma formation à Guardia Cybersecurity School.
